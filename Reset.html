@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page Title -->
+    <title>Plancord</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="title" content="Plancord, the finest work-life scheduler.
+   With Plancord app, plan your work schedule, leave entitlements and never miss your precious life events.
+   It is free to use and now available for iPhone and Android users.
+   Download  | Share | Rate">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+    <!-- Thumbnail -->
+   <meta property="og:image" itemprop="image" content="thumbnail.png">
+   <link itemprop="thumbnailUrl" href="thumbnail.png"> 
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="favicon.png">
+
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli%7CRubik:400,400i,500,700">
+
+    <!-- ======= Bootstrap CSS ======= -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+    <!-- ======= Font Awesome CSS ======= -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- ======= Owl Carousel CSS ======= -->
+    <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.carousel.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+    <!-- ======= Magnific Popup CSS ======= -->
+    <link rel="stylesheet" href="assets/plugins/magnific-popup/magnific-popup.min.css">
+
+    <!-- ======= Main Stylesheet ======= -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ======= Custom Stylesheet ======= -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SV8M67CE6S"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SV8M67CE6S');
+    </script>
+
+</head>
+
+<body>
+    
+
+    <!-- Preloader Begin -->
+    <div class='preloader w-100 h-100 position-fixed'>
+        <div class="loader">
+            <img class="icon" src="assets/img/preloader.png" alt="">
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+   
+
+    <!-- Contact Info Begin -->
+    <section id="contact" class="pt-120 pb-30">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-lg-12">
+                    <!-- Contact Form Begin -->
+                    <div class="contact-form-wrapper text-center">
+                        <h2>Reset Password</h2><br>
+                        <p>In order to reset password associated with your account please enter a valid password into "New password" field. Enter that password again into the "Confirm Password" field and Click Submit.</p>
+
+                        <form method="POST" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="password" name="New_password" class="theme-input-style" placeholder="New Password"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="password" name="Old_password" class="theme-input-style" placeholder="Confirm Password"
+                                        required>
+                                </div>
+                              
+
+                                <div class="col-12">
+                                    <button type="submit" onclick="sendMail()" class="btn"><span>Submit</span></button>
+                                </div>
+                            </div>
+                            <div class="form-response"></div>
+                        </form>
+                    </div>
+                    <!-- Contact Form End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Info End -->
+
+
+   
+<script>
+    $(document).ready(function(){   
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(2000);
+     }, 4000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(2000);
+    }); 
+}); 
+</script>
+
+<script>
+        function sendMail(){
+                var New_password = document.getElementsByName("New_password")[0].value;
+                var Old_password = document.getElementsByName("Old_password")[0].value;
+
+                var url_string = window.location.href
+                var url = new URL(url_string);
+                var id = url.searchParams.get("id");
+
+
+            let body = {
+                password :document.getElementsByName("New_password")[0].value,
+                reset_password_hash:id
+            }
+
+            if(New_password==Old_password)
+            { 
+            axios.post("https://plancord.com/api/user/reset_password_from_mail",body).then(res=>{
+                if(res.status===200){
+                    alert("Password Changed Successfully");
+                }
+                else{
+                    alert("Password Change Request Failed")
+                }
+            })
+            }
+            else{
+                alert("Passwords does not match");
+            }
+        }
+</script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- ======= jQuery Library ======= -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!-- ======= Bootstrap Bundle JS ======= -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- =======  Mobile Menu JS ======= -->
+    <script src="assets/js/menu.min.js"></script>
+
+    <!-- ======= Waypoints JS ======= -->
+    <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+
+    <!-- ======= Counter Up JS ======= -->
+    <script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
+
+    <!-- ======= Owl Carousel JS ======= -->
+    <script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- ======= Isotope JS ====== -->
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- ======= Magnific Popup JS ======= -->
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- ======= Countdown JS ======= -->
+    <script src="assets/plugins/countdown/countdown.min.js"></script>
+
+    <!-- ======= Retina JS ======= -->
+    <script src="assets/plugins/retinajs/retina.min.js"></script>
+
+    <!-- ======= Google API ======= -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0">
+    </script>
+
+    <!-- ======= Main JS ======= -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ======= Custom JS ======= -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
