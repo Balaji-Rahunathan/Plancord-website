@@ -557,7 +557,7 @@ body {
 .appointment-modal .modal-dialog .modal-content .form-title,
 .header .header-main.style--one .main-menu #menu-button,
 .header .header-main.style--one .main-menu .nav li.current-menu-item>a,
-.header .header-main.style--one .main-menu .nav li.current-menu-parent>a,
+.header .header-main.style--one .main-menu .nav li.header-menu>a.active,
 .header .header-main.style--one .main-menu .nav li ul li:hover>a,
 .offcanvas-wrapper .offcanvas-content .widget.widget_contact_info .single-info span,
 .single-blog-style--two .blog-content .post-meta li a:hover,
@@ -3746,4 +3746,10 @@ contact-form-wrapper h2 {
 
 html {
   scroll-behavior: smooth;
+}
+
+/*---scroll active class***/
+
+#nav .current a {
+  color: #ff7d37 !important;
 }

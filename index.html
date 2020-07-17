@@ -67,26 +67,31 @@
 
                     <div class="col-lg-9 col-sm-8 col-4">
                         <!-- Main Menu Begin -->
-                        <div class="main-menu d-flex align-items-center justify-content-end">
-                            <ul class="nav align-items-center">
-                                <li class="current-menu-parent menu-item-has-children">
-                                    <a href="#home">Home</a>
+                        <div class="main-menu d-flex align-items-center justify-content-end" id="main-menu">
+                            <ul class="nav align-items-center" id="nav">
+<!--                              
+                                <li class="current-menu-parent menu-item-has-children  header-menu">
+                                    <a href="#home" class="menuitem">Home</a>
+
+                                </li> -->
+                                <li class="menu-item-has-children active">
+                                    <a href="#home" class="menuitem">Home</a>
 
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#why">Why us</a>
+                                    <a href="#why" class="menuitem">Why us</a>
 
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#features">Features</a>
+                                    <a href="#features" class="menuitem">Features</a>
 
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#about">About</a>
+                                    <a href="#about" class="menuitem">About</a>
 
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#contact">Contact</a>
+                                    <a href="#contact" class="menuitem">Contact</a>
 
                                 </li>
 
@@ -174,7 +179,7 @@
     <!-- Offcanvas End -->
 
     <!-- Slider Begin -->
-    <section class="banner section-pattern" data-bg-img="assets/img/section-pattern/slider-pattern.png">
+    <section id="home" class="banner section-pattern" data-bg-img="assets/img/section-pattern/slider-pattern.png">
         <!-- Banner Slider Begin -->
         <div class="banner-slider owl-carousel d-flex align-items-center justify-content-center"
             data-owl-animate-in="fadeIn" data-owl-animate-Out="fadeOut" data-owl-autoplay="false" data-owl-dots="true">
@@ -600,7 +605,7 @@
                                         placeholder="Company Name">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="tel" name="phone" class="theme-input-style" placeholder="Phone">
+                                    <input type="tel" name="phone" class="theme-input-style"  placeholder="Phone">
                                 </div>
 
                                 <div class="col-12">
@@ -710,8 +715,8 @@
                                 <li><a href="#">Our Services</a></li>
                                 <li><a href="#">Our Experts</a></li>
                                 <li><a href="#">Get Constultation</a></li>
-                                <li><a href="#">Terms & Condition</a></li>
-                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="terms.html">Terms & Condition</a></li>
+                                <li><a href="privacy.html">Privacy policy</a></li>
                             </ul>
                             <!-- Menu End -->
                         </div>
@@ -750,13 +755,13 @@
                         <div class="widget widget_social_icon">
                             <ul class="social_icon_list list-inline">
                                 <li>
-                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/pages/category/Business-Service/Plancord-105811674151639/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/Plancord1"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                    <a href="https://www.linkedin.com/company/plancord"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -798,9 +803,17 @@
 
     <!-- ======= jQuery Library ======= -->
     <script src="assets/js/jquery.min.js"></script>
+    <!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script> -->
+
 
     <!-- ======= Bootstrap Bundle JS ======= -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+       <!--jquer nav plugin-->
+       <script src="assets/js/jquery.nav.js"></script>
 
     <!-- =======  Mobile Menu JS ======= -->
     <script src="assets/js/menu.min.js"></script>
@@ -830,11 +843,15 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0">
     </script>
 
+    
+ 
+
     <!-- ======= Main JS ======= -->
     <script src="assets/js/main.js"></script>
 
     <!-- ======= Custom JS ======= -->
     <script src="assets/js/custom.js"></script>
+
 </body>
 
 </html>

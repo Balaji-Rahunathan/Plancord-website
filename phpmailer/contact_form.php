@@ -24,7 +24,7 @@ if ( isset( $_POST[ 'email' ] ) || array_key_exists( 'email', $_POST ) ) :
 	$message[ 'body' ] .= '<b>Name:</b> ' . $message[ 'name' ];
 	$message[ 'body' ] .= '<br><b>Email:</b> ' . $message[ 'email' ];
 	$message[ 'body' ] .= '<br><b>Company:</b> ' . $message[ 'company' ];
-	$message[ 'body' ] .= '<br><b>Phone:</b> ' . $message[ 'Phone' ];
+	$message[ 'body' ] .= '<br><b>Phone:</b> ' . $message[ 'phone' ];
 	$message[ 'body' ] .= '<br><br><b>Message:</b><br>' . $message[ 'message' ];
 	
 	// Include
