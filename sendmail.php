@@ -3,7 +3,7 @@
 // Settings
 $settings = array(
     "name"          => "sajeesh",
-    "email"         => "vijayvishwa2050@gmail.com",
+    "email"         => "binu@plancord.com",
 );
 
 require_once "phpmailer/contact_form.php";
