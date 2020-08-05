@@ -3,6 +3,7 @@
 // Class
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
 // Validate
 if ( isset( $_POST[ 'email' ] ) || array_key_exists( 'email', $_POST ) ) :
@@ -30,6 +31,7 @@ if ( isset( $_POST[ 'email' ] ) || array_key_exists( 'email', $_POST ) ) :
 	// Include
 	require 'phpmailer/Exception.php';
 	require 'phpmailer/PHPMailer.php';
+	require 'phpmailer/SMTP.php';
 
 	$mail = new PHPMailer( true );
 
